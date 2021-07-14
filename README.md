@@ -84,11 +84,11 @@ B2B2C是一种电子商务类型的网络购物商业模式，B是BUSINESS的简
 
 ### 技术架构 :
 
-![image-20210714231654445](image/image-20210714231654445.png)
+![image-20210714231654445](https://github.com/imlty/all-changgou/blob/feature/markdown/image/image-20210714231654445.png)
 
 ### 系统架构 :
 
-![image-20210714232034372](image/image-20210714232034372.png)
+![image-20210714232034372](https://github.com/imlty/all-changgou/blob/feature/markdown/image/image-20210714232034372.png)
 
 ## 环境准备 ：
 
