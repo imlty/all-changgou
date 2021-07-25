@@ -17,7 +17,7 @@ import org.springframework.context.annotation.Bean;
 public class RabbitMQDelayApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(RabbitMQDelayApplication.class,args);
+        SpringApplication.run(RabbitMQDelayApplication.class, args);
     }
 
     //创建队列 queue1  (用于生产者发送的)
@@ -26,7 +26,7 @@ public class RabbitMQDelayApplication {
     //----> queue2(绑定到参数指定的exchange 和路由key中)
 
     @Bean
-    public Queue createQueue1(){
+    public Queue createQueue1() {
         return QueueBuilder.durable("queue.message.delay")
                 .withArgument("x-dead-letter-exchange", "dlx.exchange")
                 .withArgument("x-dead-letter-routing-key", "queue.message")
@@ -37,32 +37,22 @@ public class RabbitMQDelayApplication {
     //创建队列 queue2  (用于消费者消费的)
 
     @Bean
-    public Queue creatreQueue2(){
-        return new Queue("queue.message");
+    public Queue creatreQueue2() {
+        return new Queue("queue.message", true);
     }
 
 
     //创建交换机
 
     @Bean
-    public DirectExchange CreatedirectExchange(){
+    public DirectExchange CreatedirectExchange() {
         return new DirectExchange("dlx.exchange");
     }
 
     //创建binding
 
     @Bean
-    public Binding binding(){
+    public Binding binding() {
         return BindingBuilder.bind(creatreQueue2()).to(CreatedirectExchange()).with("queue.message");
     }
-
-
-
-
-
-
-
-
-
-
 }
