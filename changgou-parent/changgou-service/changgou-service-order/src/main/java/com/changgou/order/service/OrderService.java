@@ -73,4 +73,6 @@ public interface OrderService {
      * @param transaction_id
      */
     public void updateStatus(String out_trade_no,String transaction_id);
+
+    void deleteOrder(String out_trade_no);
 }

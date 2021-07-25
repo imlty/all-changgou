@@ -35,7 +35,10 @@ public class OrderUpdateListener {
             if (map.get("return_code").equalsIgnoreCase("success")) {
                 orderService.updateStatus(map.get("out_trade_no"), map.get("transaction_id"));
             } else {
-                //删除订单 支付失败.....
+                // 1. 删除订单 支付失败
+                orderService.deleteOrder(map.get("out_trade_no"));
+                // 2. 关闭订单
+                // 3. 回滚仓库
             }
         }
     }
