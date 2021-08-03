@@ -15,6 +15,7 @@
         <module>changgou-service</module>
         <module>changgou-service-api</module>
         <module>changgou-web</module>
+        <module>../spring-auth</module>
     </modules>
     <packaging>pom</packaging>
     <description>

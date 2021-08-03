@@ -45,7 +45,7 @@ store_path0 则是 M00，如果配置了 store_path1 则是 M01，以此类推�
 
 
 
-拉取镜像(已经下载了该镜像，大家无需下载了)
+拉取镜像
 
 ```
 docker pull morunchang/fastdfs
